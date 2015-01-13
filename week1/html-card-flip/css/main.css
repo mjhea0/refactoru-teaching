@@ -1,0 +1,26 @@
+.primary, .secondary {
+	position:absolute;
+	left:10px;
+	top:15px;
+}
+
+.portfolio-item .primary {
+	-webkit-transform: rotateY(0deg);
+}
+
+.portfolio-item .secondary{
+	-webkit-transform: rotateY(180deg);
+}
+
+.portfolio-item:hover .primary {
+	-webkit-transform:rotateY(-180deg);
+	transition-duration:1s;;
+}
+
+.portfolio-item:hover .secondary{
+	-webkit-transform: rotateY(0deg);
+	transition-duration:1s;
+}
+
+
+

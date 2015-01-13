@@ -1,0 +1,169 @@
+/* ADD YOUR STYLES HERE */
+
+.horizontal img {
+  padding: 20px;
+}
+
+.horizontal {
+  padding-left: 47px;
+}
+
+.num6 * {
+  padding: 0 18px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.ready li {
+  padding: 0;
+  display: list-item;
+}
+
+.ready {
+  padding-left: 50px;
+}
+
+.num7-big {
+  height: 200px;
+  padding-top: 100px;
+  margin-bottom: 0;
+}
+
+
+.num8-big {
+  padding-top: 80px;
+  margin-bottom: 0;
+}
+
+.list-horizontal li {
+  list-style: none;
+  float: left;
+}
+
+.button {
+  background-color: pink;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  border: 0;
+}
+
+.large {
+  padding: 2% 6%;
+}
+
+.medium {
+  padding: 1% 4%;
+  font-size: .7em;
+}
+
+.small {
+  padding: .5% .8%;
+  font-size: .7em;
+}
+
+nav {
+  background-color: pink;
+  width: 80%;
+  padding: 1% 2%;
+  border-radius: 5px;
+}
+
+.num10 li {
+  list-style: none;
+  display: inline;
+  margin-right: 60px;
+}
+
+.num10 a {
+  text-decoration: none;
+  color: white;
+}
+
+.num10 a:hover {
+  background-color: gray;
+}
+
+.num11 li {
+  list-style: none;
+  display: inline-block;
+  border-bottom: 2px solid pink;
+  margin-right: 5px;
+
+}
+
+.num11 a {
+  text-decoration: none;
+  color: pink;
+  padding: 0 7px;
+}
+
+li.pagination {
+  border-bottom: 0;
+}
+
+.active {
+  color: lightgray;
+  border-bottom: 2px solid lightgray;
+  padding: 0 7px;
+}
+
+.inline-media-left img {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.clearfix {
+  clear: left;
+}
+
+.null {
+  padding-left: 90px;
+}
+
+time {
+  color: lightgray;
+  font-size: small;
+}
+
+.num13 li {
+  display: inline-block;
+  list-style: none;
+  border: 1px solid blue;
+  border-bottom: 0;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+  border-width: 1px 1px 0 1px;
+  margin: 0 0.5em 0 0;
+}
+
+.num13 {
+  list-style: none;
+  padding:0;
+  margin:0;
+  margin-left: 10px;
+}
+
+.num13 li a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: blue;
+}
+
+.lemon {
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.selected-tab {
+  padding-bottom: 1px; 
+  background: white;
+}
+  
+
+
+
+

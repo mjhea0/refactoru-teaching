@@ -1,0 +1,98 @@
+/*data table*/
+
+.instruction-text {
+  color: #5F79CB;
+}
+
+tr {
+  border-bottom: 1px solid gray;
+}
+
+.last-row {
+  border-bottom: 0px;
+}
+
+
+.num {
+  padding-left: 0px;
+}
+
+
+.instruction-answer td {
+  padding:5px 100px 5px 0px;
+}
+
+/*stats*/
+
+.stats {
+  border-top: 1px solid gray;
+}
+
+
+.stats div {
+  color:lightgray;
+  font-size: 12px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.stats td{
+  padding: 30px 15px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/*bar chart*/
+
+
+.bar div {
+  background-color: #5F79CB;
+  color: white;
+  padding: 2px 200px 2px 10px;
+  border-radius: 2px;
+}
+
+.bar th {
+  text-align: right;
+  padding: 0 5px 0 0;
+}
+
+.bar tr {
+  border: 0px;
+}
+
+/*light box*/
+
+.lightbox{
+  background-color: gray;
+  padding:100px;
+}
+
+.hello {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.lightbox a {
+  background-color: #F08BAF;
+  padding: 10px 50px;
+  color: white;
+  text-align: right;
+  border-radius: 5px;
+  margin-left: 360px;
+}
+
+/*media block*/
+
+.cupcake {
+  float: left;
+  padding-right: 10px;
+  margin-bottom: 100px;
+}
+
+/*.cakes {
+  float: right;
+  height: 100px;
+}*/
