@@ -1,0 +1,18 @@
+.container {
+  max-width: 500px;
+  padding-top: 50px;
+}
+
+.editable {
+  color: white;
+  background-color: gray;
+  height: 150px;
+  width: 500px;
+  padding: 5px;
+}
+
+.editable-text-box {
+  height: 150px;
+  width: 500px;
+  padding: 5px;
+}
