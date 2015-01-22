@@ -1,22 +1,22 @@
-console.log('\ntripleFive')
+console.log('\ntripleFive');
 
 function tripleFive() {
     for (var i = 0; i < 3; i++) {
-        console.log("five")
-    };
-};
+        console.log("five");
+    }
+}
 
-tripleFive()
+tripleFive();
 
 
-console.log('\nlastLetter')
+console.log('\nlastLetter');
 
 function lastLetter(str) {
-    index = str.length - 1
-    console.log(str[index])
-};
+    index = str.length - 1;
+    console.log(str[index]);
+}
 
-lastLetter("michael")
+lastLetter("michael");
 lastLetter("javascript")
 
 
