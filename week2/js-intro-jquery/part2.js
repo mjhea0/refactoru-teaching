@@ -12,7 +12,7 @@ $(function() {
 
   $("a").on( "click", function() {
     if (!confirm("Are you sure you want to follow that link?")) {
-      $(this).remove()
+      $(this).remove();
       return false;
     }
   });

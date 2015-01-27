@@ -3,7 +3,7 @@ $(function() {
   console.log("ready!");
 
   $("#console-btn").click(function() {
-    console.log("message to the console")
+    console.log("message to the console");
   });
 
   $("#text-btn").click(function() {
