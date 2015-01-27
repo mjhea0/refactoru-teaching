@@ -17,96 +17,96 @@ function lastLetter(str) {
 }
 
 lastLetter("michael");
-lastLetter("javascript")
+lastLetter("javascript");
 
 
-console.log('\nsquare')
+console.log('\nsquare');
 
 function square(num) {
-    console.log(num * num)
-};
+    console.log(num * num);
+}
 
-square(3)
-square(5)
+square(3);
+square(5);
 
 
-console.log('\nnegate')
+console.log('\nnegate');
 
 function negate(num) {
-    console.log(num * -1)
-};
+    console.log(num * -1);
+}
 
-negate(5)
-negate(-8)
+negate(5);
+negate(-8);
 
 
-console.log('\ntoArray')
+console.log('\ntoArray');
 
 function toArray(num1, num2, num3) {
-    var numberArray = []
-    numberArray.push(num1, num2, num3)
-    console.log(numberArray)
-};
+    var numberArray = [];
+    numberArray.push(num1, num2, num3);
+    console.log(numberArray);
+}
 
-toArray(1, 4, 5)
-toArray(8, 9, 10)
+toArray(1, 4, 5);
+toArray(8, 9, 10);
 
 
-console.log('\nstartsWithA')
+console.log('\nstartsWithA');
 
 function startsWithA(str) {
     if (str[0].toUpperCase() === 'A') {
-        console.log(true)
+        console.log(true);
     } else {
-        console.log(false)
-    };
-};
+        console.log(false);
+    }
+}
 
-startsWithA('aardvark')
-startsWithA('beer')
+startsWithA('aardvark');
+startsWithA('beer');
 
 
-console.log('\nexcite')
+console.log('\nexcite');
 
 function excite(str) {
-    console.log(str + '!!!')
-};
+    console.log(str + '!!!');
+}
 
-excite('yes')
-excite('go')
+excite('yes');
+excite('go');
 
 
-console.log('\nsun')
+console.log('\nsun');
 
 function sun(str) {
     if (str.toUpperCase().indexOf('SUN') >= 0) {
-        console.log(true)
+        console.log(true);
     } else {
-        console.log(false)
-    };
-};
+        console.log(false);
+    }
+}
 
-sun('sundries')
-sun('asunder')
-sun('catapult')
+sun('sundries');
+sun('asunder');
+sun('catapult');
 
 
-console.log('\ntiny')
+console.log('\ntiny');
 
 function tiny(num) {
     if (num > 0 && num < 1) {
-        console.log(true)
+        console.log(true);
     } else {
-        console.log(false)
-    };
-};
+        console.log(false);
+    }
+}
 
-tiny(0.3)
-tiny(14)
-tiny(-5)
+tiny(0.3);
+tiny(14);
+tiny(-5);
 
 
-console.log('\ngetSeconds')
+console.log('\ngetSeconds');
 
 var getSeconds = function(str) {
     var time = str.split(":");
@@ -127,8 +127,8 @@ var getSeconds = function(str) {
 
     // Return the seconds
     console.log(seconds);
-}
+};
 
-getSeconds('01:30')
-getSeconds('10:25')
+getSeconds('01:30');
+getSeconds('10:25');
 
