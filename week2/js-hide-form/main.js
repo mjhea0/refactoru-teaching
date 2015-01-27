@@ -1,5 +1,5 @@
 // // hide
-// $('.hide-btn').hide()
+// $('.hide-btn').hide();
 
 // $(function() {
 
@@ -7,7 +7,7 @@
 //   $('.submit-btn').on('click', function(event) {
 
 //     // prevent form submit
-//     event.preventDefault()
+//     event.preventDefault();
 
 //     // grab input values
 //     var name = $('.name-input').val();
@@ -24,21 +24,21 @@
 //   // show form
 //   $('.show-btn').on('click', function() {
 //     // make form visible
-//     $('form').toggleClass('profile-form')
+//     $('form').toggleClass('profile-form');
 //     // hide show form button
-//     $(this).hide()
+//     $(this).hide();
 //     // show hide form button
-//     $('.hide-btn').show()
+//     $('.hide-btn').show();
 //   });
 
 //   // hide form
 //   $('.hide-btn').on('click', function() {
 //     // make form invisible
-//     $('form').toggleClass('profile-form')
+//     $('form').toggleClass('profile-form');
 //     // hide hide form button
-//     $(this).hide()
+//     $(this).hide();
 //     // show show form button
-//     $('.show-btn').show()
+//     $('.show-btn').show();
 //   });
 
 // });
@@ -48,7 +48,7 @@
 // ------- bonus --------- //
 
 // hide
-$('.hide-btn').hide()
+$('.hide-btn').hide();
 
 $(function() {
 
@@ -56,7 +56,7 @@ $(function() {
   $('form').on('change', function(event) {
 
     // prevent form submit
-    event.preventDefault()
+    event.preventDefault();
 
     // grab input values
     var name = $('.name-input').val();
@@ -73,25 +73,25 @@ $(function() {
   // show form
   $('.show-btn').on('click', function() {
     // make form visible
-    $('form').toggleClass('profile-form')
+    $('form').toggleClass('profile-form');
     // grab current values, add to form inputs
-    $('.name-input').val($('.profile-name').text())
-    $('.city-input').val($('.profile-city').text())
-    $('.state-input').val($('.profile-state').text())
+    $('.name-input').val($('.profile-name').text());
+    $('.city-input').val($('.profile-city').text());
+    $('.state-input').val($('.profile-state').text());
     // hide show form button
-    $(this).hide()
+    $(this).hide();
     // show hide form button
-    $('.hide-btn').show()
+    $('.hide-btn').show();
   });
 
   // hide form
   $('.hide-btn').on('click', function() {
     // make form invisible
-    $('form').toggleClass('profile-form')
+    $('form').toggleClass('profile-form');
     // hide hide form button
-    $(this).hide()
+    $(this).hide();
     // show show form button
-    $('.show-btn').show()
+    $('.show-btn').show();
   });
 
 });
