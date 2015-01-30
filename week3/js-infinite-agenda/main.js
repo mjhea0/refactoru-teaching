@@ -1,9 +1,9 @@
-$(function() {     
+$(function() {
 
 
   //** globals */
   var months = ["Jan","Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  var month = ["month", "alternative"]
+  var month = ["month", "alternative"];
   var single_day = 86400000;
   var single_week = single_day * 7;
   var offset = -3; // render X amount of weeks before current date
@@ -27,7 +27,7 @@ $(function() {
     for(var i = 0; i < 7; i++) {
       var difference = i - currentDayOfWeek;
       var anotherDay = calculateDay(someDate, difference);
-      week[i] = anotherDay; 
+      week[i] = anotherDay;
     }
     return generateWeekAsHtmlRow(week);
   }
@@ -57,7 +57,7 @@ $(function() {
     var formattedDate = "";
     if(date.getDate() == 1) formattedDate += months[date.getMonth()] + " "; // month
     formattedDate += date.getDate(); // day
-    if(date.getDate() == 1 && date.getMonth() == 0) formattedDate += ", " + date.getFullYear(); // year
+    if(date.getDate() == 1 && date.getMonth() === 0) formattedDate += ", " + date.getFullYear(); // year
     return formattedDate;
   }
 
@@ -71,12 +71,12 @@ $(function() {
   $(window).scroll(function() {
     if($(document).height() - 60 < $(document).scrollTop() + $(window).height()) {
       renderMoreWeeks(10); // render 10 more times
-      
+
     }
   });
 
 
-  renderMoreWeeks(10); // render 10 weeks to start	
+  renderMoreWeeks(10); // render 10 weeks to start
 
 
 });
