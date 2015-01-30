@@ -1,0 +1,13 @@
+.container {max-width:100%; padding:10px;}
+#calendar { width:95%; border-spacing:.5px;}
+#calendar th,td{ width: 150px; height:150px; vertical-align:top; padding:3px;}
+#calendar td{border:1px solid black;}
+#calendar td:hover {background: #2C3E50; color: white;}
+#calendar th {vertical-align:bottom; text-align:center;}
+#loader {margin-left: auto; margin-right: auto; display: block; margin-top: 2em;
+margin-bottom: 2em; }
+.alternative { background: #BDC3C7; }
+.today { background: #E74C3C; }
+.white {color:transparent;}
+h1 {font-size: 10em;}
+th {font-size: 3em;}
