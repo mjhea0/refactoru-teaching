@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1 Add new video
+    p
+        a(href='/') Go back home
+    .row
+        .col-md-4
+            br
+            if full
+                h4 Sorry, the contest is full!
+            else
+                form(method='post', action='/submit')
+
+                    .form-group
+                        label Your name:
+                        input.form-control(name='submitterName', type='text', placeholder='Your name')
+                    .form-group
+                        label Youtube Video ID:
+                        input#youtubeUrl.form-control(name='videoID', type='text', placeholder="Video ID")
+                    .form-group
+                        label Title:
+                        input.form-control(name='videoTitle', type='text', placeholder='Video title')
+                    .form-group
+                        label Description:
+                        textarea.form-control(name='videoDescription', placeholder="Video description")
+
+                    button.btn.btn-primary.btn-md.btn-block(type='submit') Submit

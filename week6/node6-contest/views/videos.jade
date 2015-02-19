@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 View all videos
+    p
+        a(href='/') Go back home
+    br
+    if(videos.length > 0)
+        for video in videos
+            h4 #{video.submitterName}'s video
+            p <iframe width="560" height="315" src="//www.youtube.com/embed/#{video.videoID}" frameborder="0" allowfullscreen></iframe>
+            p Title: #{video.videoTitle}
+            p Description: #{video.videoDescription}
+            br
+    else
+        h4 No videos! Go&nbsp;
+            a(href='/add') add
+            | &nbsp;one.
