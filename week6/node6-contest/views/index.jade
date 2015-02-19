@@ -3,10 +3,11 @@ extends layout
 block content
     h1 Video Voting!
     br
-    ul
-        li
-            a(href='/add') Add new video
-        li
-            a(href='/vote') Vote on vidoes
-        li
-            a(href='/videos') View all videos
+    h4 What would you like to do?
+    br
+    a(href='/add')
+        button.btn.btn-primary.btn-lg Add new video
+    br
+    br
+    a(href='/videos')
+        button.btn.btn-success.btn-lg Vote on videos

@@ -1,18 +1,31 @@
 extends layout
 
 block content
-    h1 View all videos
+    h1 Vote!
     p
         a(href='/') Go back home
     br
-    if(videos.length > 0)
-        for video in videos
-            h4 #{video.submitterName}'s video
-            p <iframe width="560" height="315" src="//www.youtube.com/embed/#{video.videoID}" frameborder="0" allowfullscreen></iframe>
-            p Title: #{video.videoTitle}
-            p Description: #{video.videoDescription}
-            br
-    else
+    if(error)
         h4 No videos! Go&nbsp;
             a(href='/add') add
             | &nbsp;one.
+    else
+        .row
+            .col-md-4.col-md-offset-1
+                h4 #{first.submitterName}'s video
+                p <iframe width="280" height="157" src="//www.youtube.com/embed/#{first.videoID}" frameborder="0" allowfullscreen></iframe>
+                p Title: #{first.videoTitle}
+                p Description: #{first.videoDescription}
+                p Votes: #{first.votes}
+                a(href="/vote/" + first.videoID)
+                    button.btn.btn-primary.btn-md
+                        span.glyphicon.glyphicon-ok
+            .col-md-4.col-md-offset-1
+                h4 #{second.submitterName}'s video
+                p <iframe width="280" height="157" src="//www.youtube.com/embed/#{second.videoID}" frameborder="0" allowfullscreen></iframe>
+                p Title: #{second.videoTitle}
+                p Description: #{second.videoDescription}
+                p Votes: #{second.votes}
+                a(href="/vote/" + second.videoID)
+                    button.btn.btn-primary.btn-md
+                        span.glyphicon.glyphicon-ok
