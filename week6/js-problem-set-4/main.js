@@ -4,6 +4,15 @@ function isNumber(num) {
   return !isNaN(parseInt(num));
 }
 
+function isLetter(val){
+  if (!val) {
+    return false;
+  }
+  var char = val.toLowerCase().charCodeAt(0);
+  return (char >= 97 && char <= 122);
+}
+
+
 // *** add numbers ** ///
 
 function addNumbers(str) {
@@ -33,7 +42,6 @@ console.log(addNumbers("5Hello 5"));
 
 // *** longest word ** ///
 
-
 function longestWord(str) {
   // create an array
   var words = str.split(" ");
@@ -51,3 +59,21 @@ function longestWord(str) {
 console.log(longestWord('one two three'));
 console.log(longestWord('.one three'));
 console.log(longestWord('one two'));
+
+
+// *** average string numbers *** //
+
+function averageStringNumbers(str) {
+  var letterCounter = 0;
+  var numberSum = 0;
+  for(var i = 0; i < str.length; i++) {
+    if(isNumber(str[i])) {
+      numberSum += parseInt(str[i]);
+    } else if (isLetter(str[i])) {
+      letterCounter += 1;
+    }
+  }
+  return Math.round(numberSum/letterCounter);
+}
+
+console.log(averageStringNumbers('Hello6 9World 2, Nic8e D7ay!'));
