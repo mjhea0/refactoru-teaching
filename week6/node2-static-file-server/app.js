@@ -1,6 +1,6 @@
 var express = require('express');
 var fs = require('fs');
-var fileContents = fs.readFileSync('data.txt');
+// var fileContents = fs.readFileSync('data.txt');
 
 var app = express();
 

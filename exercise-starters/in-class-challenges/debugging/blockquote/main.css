@@ -1,0 +1,33 @@
+body {
+	font-family: Helvetica;
+	font-weight: 300;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 850px;
+}
+
+.bigbutton {
+	display: inline-block;
+	font-size: 40px;
+	margin: 40px;
+	color: #fff;
+	background-color: #979797;
+	border: none;
+	padding: 20px 40px;
+	text-decoration: none;
+}
+
+.active {
+	color: #fff;
+	background-color: #8E44AD;
+}
+
+.block-cite {
+	display: block;
+	margin-top: 10px;
+}
+.block-cite:before {
+	content: '-';
+}

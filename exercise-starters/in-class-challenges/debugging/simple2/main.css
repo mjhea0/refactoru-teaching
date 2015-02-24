@@ -1,0 +1,17 @@
+.bigbutton {
+	font-family: Helvetica;
+	font-weight: 300;
+	display: inline-block;
+	font-size: 40px;
+	margin: 40px;
+	color: #fff;
+	background-color: #979797;
+	border: none;
+	padding: 20px 40px;
+	text-decoration: none;
+}
+
+.active {
+	color: #fff;
+	background-color: #8E44AD;
+}

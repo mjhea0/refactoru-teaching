@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    .container
+        h1 Applicants
+        br
+        ul#applications.list-unstyled
+            for data in applicantInfo
+                li
+                    h3= data.name
+                    p Bio: #{data.bio}
+                    p Skills: #{data.skills}
+                    p Years of Experience: #{data.years}
+                    p Why they want to work here: #{data.why}
+                    a(class='btn btn-default btn-sm' href="/#{data._id}") View
+                    button(class='delete btn btn-default btn-sm', data-id="#{data._id}") Delete
+                    br
