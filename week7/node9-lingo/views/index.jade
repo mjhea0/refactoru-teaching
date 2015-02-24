@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1 Welcome!
+    p.lead Say something worthwhile here.
+    br
+    if (!user)
+        a(href="/login") Login
+        br
+        a(href="/register") Register
+    if (user)
+        p You are currently logged in as #{user.username}
+        a(href="/logout") Logout
+        h3 Lingo!
+        ul
+            li
+                a(href='/translate') Translate
+            li
+                a(href='#') Quiz
+            li
+                a(href='#') Progress
