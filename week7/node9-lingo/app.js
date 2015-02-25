@@ -40,6 +40,8 @@ mongoose.connect('mongodb://localhost/refactoru_lingo');
 app.get('/', indexController.index);
 app.get('/login', userController.login);
 app.get('/register', userController.register);
+app.get('/logout', userController.logout);
+app.post('/login', passport.authenticate('local'), userController.loginUser);
 app.post('/register', userController.addUser);
 // app.get('/translate', indexController.translate);
 
