@@ -2,45 +2,40 @@ extends layout
 
 block content
   .container
-    h1 Translate a Word or Phrase
+    h1 Translate a Word
     hr
+    a(href='/') Back home
+    br
     br
     .row
-      h4 Instructions:
-      p.ul
-        li Pick a language to translate from
-        li Pick a language to translate to
-        li Enter a word. Press submit.
-
-      h4 From:
-      select#languageFrom
-        option
-        option(data-language='eng') English
-        option(data-language='spa') Spanish
-        option(data-language='fra') French
-      h4 To:
-      select#languageTo
-        option
-        option(data-language='eng') English
-        option(data-language='spa') Spanish
-        option(data-language='fra') French
-      .dropdown
-        button#dropdownMenu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-expanded='true')
-          | Dropdown
-          span.caret
-        ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu1')
-          li(role='presentation')
-            a(role='menuitem', tabindex='-1', href='#') Action
-          li(role='presentation')
-            a(role='menuitem', tabindex='-1', href='#') Another action
-          li(role='presentation')
-            a(role='menuitem', tabindex='-1', href='#') Something else here
-          li(role='presentation')
-            a(role='menuitem', tabindex='-1', href='#') Separated link
-      h4 Enter a word:
-      form
-        input#translateWord(name="word", type="text", placeholder="Word...")
-        br
-        button#translate-btn.btn.btn-inverse Submit
+      .col-md-3
+        h4 Instructions:
+        p.ul
+          li Pick a language to translate from
+          li Pick a language to translate to
+          li Enter a word. Press submit.
+    br
+    .row
+      .col-md-2
+        h4 Translate From:
+        select#languageFrom
+          option
+          option(data-language='eng') English
+          option(data-language='spa') Spanish
+          option(data-language='fra') French
+      .col-md-2
+        h4 Translate From:
+        select#languageTo
+          option
+          option(data-language='eng') English
+          option(data-language='spa') Spanish
+          option(data-language='fra') French
+      .col-md-2
+        h4 Enter a word:
+        form
+          input#translateWord(name="word", type="text", placeholder="Word...")
+          br
+          br
+          button#translate-btn.btn.btn-default Submit
     .row
       div#translated-word

@@ -26,25 +26,36 @@ router.post('/register', function(req, res) {
 
 
 router.get('/login', function(req, res) {
-    res.render('login', { user : req.user });
+  res.render('login', { user : req.user });
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {
-    res.redirect('/');
+  res.redirect('/');
 });
 
 router.get('/logout', function(req, res) {
-    req.logout();
-    res.redirect('/');
+  req.logout();
+  res.redirect('/');
 });
 
 router.get('/ping', function(req, res){
-    res.status(200).send("pong!");
+  res.status(200).send("pong!");
 });
 
 router.get('/translate', function(req, res){
-    res.render('translate', { user : req.user });
+  res.render('translate', { user : req.user });
 });
+
+router.post('/translate', function(req, res){
+  beglobal.translations.translate(req.body, function(err, results) {
+    if (!err) {
+      res.send(results);
+    } else {
+      res.send(err);
+    }
+  });
+});
+
 
 
 module.exports = router;
