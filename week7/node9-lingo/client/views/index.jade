@@ -10,8 +10,7 @@ block content
       br
       a(href="/register") Register
     if (user)
-      p You are currently logged in as <strong>#{user.username}</strong>.
-        &nbsp;
+      p You are currently logged in as <strong>#{user.username}</strong>.&nbsp;
         a(href="/logout") Logout
       ul
         li

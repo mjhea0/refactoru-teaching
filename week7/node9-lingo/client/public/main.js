@@ -32,15 +32,15 @@ $(function() {
 
   // start a quiz
   $('#selectQuiz').on('change', function() {
-    var quizArray;
     var words = ['hello', 'goodbye', 'watch', 'phone', 'computer', 'taxi', 'hotel',
       'country', 'help', 'lost', 'cost', 'go'];
-    selectedLanguage = $('#selectQuiz option:selected').attr('data-language');
-    quizArrary = createWordsObject(words);
+    var selectedLanguage = $('#selectQuiz option:selected').attr('data-language');
+    var quizArray = createWordsObject(words);
+
     $('#quiz').empty();
     $('#quiz').append('<h3>Please wait while your quiz is loading</h3>');
 
-    $.post('/displayQuiz', {objArr: quizArray}, function(data) {
+    $.post('/displayQuiz', {objArray: quizArray}, function(data) {
       var i, _i, _len;
       $('#quiz').empty();
       for (_i = 0, _len = data.length; _i < _len; _i++) {
@@ -63,9 +63,8 @@ function capitalize(string){
 }
 
 function createWordsObject(arr){
-  quizzo.length = 0;
   for (var i = 0; i < arr.length; i++) {
-    quizWords = {
+    var quizWords = {
       "text": arr[i],
       "from": "eng",
       "to": selectedQuiz
