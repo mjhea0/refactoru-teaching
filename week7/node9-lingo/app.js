@@ -1,24 +1,24 @@
 // dependencies
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+var express = require('express'),
+    path = require('path'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser'),
+    mongoose = require('mongoose'),
+    passport = require('./server/auth'),
+    mainRoutes = require('./server/routes/index'),
+    userRoutes = require('./server/routes/users'),
+    translateRoutes = require('./server/routes/translate');
 
-var routes = require('./server/routes/index');
-
+// create instance of express
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'client', 'views'));
 app.set('view engine', 'jade');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+// middleware
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -32,14 +32,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'client', 'public')));
 
-
-app.use('/', routes);
-
-// passport config
-var Account = require('./server/models/account');
-passport.use(new LocalStrategy(Account.authenticate()));
-passport.serializeUser(Account.serializeUser());
-passport.deserializeUser(Account.deserializeUser());
+// routes
+app.use('/', mainRoutes);
+app.use('/', userRoutes);
+app.use('/', translateRoutes);
 
 // mongoose
 mongoose.connect('mongodb://localhost/passport_local_mongoose_express4');
