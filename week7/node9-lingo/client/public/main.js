@@ -34,27 +34,30 @@ $(function() {
   $('#selectQuiz').on('change', function() {
 
     var selectedLanguage = $('#selectQuiz option:selected').attr('data-language');
-    var words = ['hello', 'goodbye', 'watch', 'phone', 'computer', 'taxi', 'hotel', 'country', 'help', 'lost', 'cost', 'go'];
+    // var words = ['hello', 'goodbye', 'watch', 'phone', 'computer', 'taxi', 'hotel', 'country', 'help', 'lost', 'cost', 'go'];
+    var words = ['hello'];
     var quizzo = [];
 
     for (var i = 0; i < words.length; i++) {
-      quizzo.push({"text": words[i],  "from": "eng", "to": selectedLanguage});
+      quizzo.push({"text": words[i], "from": "eng", "to": selectedLanguage});
     }
 
     $('#quiz').empty();
     $('#quiz').append('<h3>Please wait while your quiz is loading</h3>');
 
-    $.post('/displayQuiz', {objArray: quizzo}, function(data) {
-      var i, _i, _len;
-      $('#quiz').empty();
-      for (_i = 0, _len = data.length; _i < _len; _i++) {
-        i = data[_i];
-        $('#quiz').append('<li class="list-group-item">' + i['translation'] + '<input class="answer-input" type="text" placeholder="Enter Answer"></li>');
-      }
-      $('#quiz li').each(function(j) {
-        $(this).attr('data-eng', quizArray[j]['text']);
-      });
+    $.post('/quiz', {objArray: quizzo}, function(data) {
+      console.log(data);
+      // var i, _i, _len;
+      // $('#quiz').empty();
+      // for (_i = 0, _len = data.length; _i < _len; _i++) {
+      //   i = data[_i];
+      //   $('#quiz').append('<li class="list-group-item">' + i['translation'] + '<input class="answer-input" type="text" placeholder="Enter Answer"></li>');
+      // }
+      // $('#quiz li').each(function(j) {
+      //   $(this).attr('data-eng', quizArray[j]['text']);
+      // });
     });
+
   });
 
   function capitalize(string){

@@ -24,13 +24,7 @@ router.get('/quiz', ensureAuthenticated, function(req, res){
   res.render('quiz', { user : req.user });
 });
 
-router.get('/progress', ensureAuthenticated, function(req, res){
-  res.render('progress', { user : req.user });
-});
-
-
-
-router.post('/displayQuiz', ensureAuthenticated, function(req, res) {
+router.post('/quiz', ensureAuthenticated, function(req, res) {
 
   var quizWords = req.body;
   console.log(quizWords);
@@ -60,6 +54,10 @@ router.post('/displayQuiz', ensureAuthenticated, function(req, res) {
     return res.send(quizResults);
   });
 
+});
+
+router.get('/progress', ensureAuthenticated, function(req, res){
+  res.render('progress', { user : req.user });
 });
 
 
