@@ -28,16 +28,17 @@ router.get('/progress', ensureAuthenticated, function(req, res){
   res.render('progress', { user : req.user });
 });
 
-var quizResults =[];
 
-router.post('/displayQuiz', function(req, res) {
+
+router.post('/displayQuiz', ensureAuthenticated, function(req, res) {
 
   var quizWords = req.body;
+  console.log(quizWords);
   var tasks = [];
-  var referenceObject = quizWords.objArray;
+  var quizResults =[];
 
-  for (var i = 0; i < referenceObject.length; i++) {
-    var quizWord = referenceObject[i];
+  for (var i = 0; i < quizWords.length; i++) {
+    var quizWord = quizWords[i];
     console.log(quizWord);
     callAPI(quizWord);
   }

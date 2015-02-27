@@ -32,15 +32,19 @@ $(function() {
 
   // start a quiz
   $('#selectQuiz').on('change', function() {
-    var words = ['hello', 'goodbye', 'watch', 'phone', 'computer', 'taxi', 'hotel',
-      'country', 'help', 'lost', 'cost', 'go'];
+
     var selectedLanguage = $('#selectQuiz option:selected').attr('data-language');
-    var quizArray = createWordsObject(words);
+    var words = ['hello', 'goodbye', 'watch', 'phone', 'computer', 'taxi', 'hotel', 'country', 'help', 'lost', 'cost', 'go'];
+    var quizzo = [];
+
+    for (var i = 0; i < words.length; i++) {
+      quizzo.push({"text": words[i],  "from": "eng", "to": selectedLanguage});
+    }
 
     $('#quiz').empty();
     $('#quiz').append('<h3>Please wait while your quiz is loading</h3>');
 
-    $.post('/displayQuiz', {objArray: quizArray}, function(data) {
+    $.post('/displayQuiz', {objArray: quizzo}, function(data) {
       var i, _i, _len;
       $('#quiz').empty();
       for (_i = 0, _len = data.length; _i < _len; _i++) {
@@ -53,23 +57,8 @@ $(function() {
     });
   });
 
-});
-
-var quizzo = [];
-var selectedQuiz = String;
-
-function capitalize(string){
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function createWordsObject(arr){
-  for (var i = 0; i < arr.length; i++) {
-    var quizWords = {
-      "text": arr[i],
-      "from": "eng",
-      "to": selectedQuiz
-    };
-    quizzo.push(quizWords);
+  function capitalize(string){
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
-  return quizzo;
-}
+
+});
