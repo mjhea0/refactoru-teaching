@@ -2,6 +2,14 @@ var express = require('express');
 var passport = require('passport');
 var Account = require('../models/account');
 var router = express.Router();
+var BeGlobal = require('node-beglobal');
+var config = require('../config');
+
+
+//initialize the BeGlobal API
+var beglobal = new BeGlobal.BeglobalAPI({
+  api_token: config.apiToken
+});
 
 
 router.get('/', function (req, res) {

@@ -7,7 +7,9 @@ $(function() {
 
   // translate a word
   $('#translate-btn').click(function(e) {
+
     e.preventDefault();
+
     var wordFrom = $('#languageFrom option:selected').attr('data-language');
     var wordTo = $('#languageTo option:selected').attr('data-language');
     var word = $('#translateWord').val();
@@ -16,11 +18,14 @@ $(function() {
       from: wordFrom,
       to: wordTo,
     };
+
     $.post('/translate', wordObject, function(data) {
       $('#translated-word').html('<h3><em>'+capitalize(word)+
         '</em> translates to <em>'+data.translation+'</em>.</h3>');
     });
+
   });
+
 });
 
 function capitalize(string){
