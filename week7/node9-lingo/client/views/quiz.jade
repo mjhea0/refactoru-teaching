@@ -7,6 +7,10 @@ block content
     a(href='/') Back home
     br
     br
-    form
-      select
-        option.lang-quiz(data-language='eng') English
+    .row
+      .col-md-4
+        from(role='form')
+          select.form-control#selectQuiz
+            option.lang-quiz(data-lang='eng') English
+    .row
+      ul#quiz.list-group

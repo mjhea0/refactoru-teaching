@@ -18,22 +18,22 @@ block content
     .row
       .col-md-2
         h4 Translate From:
-        select#languageFrom
+        select.form-control#languageFrom
           option
           option(data-language='eng') English
           option(data-language='spa') Spanish
           option(data-language='fra') French
       .col-md-2
         h4 Translate To:
-        select#languageTo
+        select.form-control#languageTo
           option
           option(data-language='eng') English
           option(data-language='spa') Spanish
           option(data-language='fra') French
       .col-md-2
         h4 Enter a word:
-        form
-          input#translateWord(name="word", type="text", placeholder="Word...")
+        from(role='form')
+          input#translateWord.form-control(name="word", type="text", placeholder="Word...")
           br
           br
           button#translate-btn.btn.btn-default Submit

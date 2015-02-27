@@ -30,6 +30,26 @@ $(function() {
 
   });
 
+  // start a quiz
+  // $('#selectQuiz').on('change', function() {
+  //   var quizArr;
+  //   selectedQuiz = $('#selectQuiz option:selected').attr('data-lang');
+  //   quizArr = createWordsObj(words);
+  //   $('#quiz').empty();
+  //   $('#quiz').append('<h2>Please wait while your quiz is loading</h2>');
+  //   $.post('/displayQuiz', {objArr: quizArr}, function(data) {
+  //     var i, _i, _len;
+  //     $('#quiz').empty();
+  //     for (_i = 0, _len = data.length; _i < _len; _i++) {
+  //       i = data[_i];
+  //       $('#quiz').append('<li class="list-group-item">' + i['translation'] + '<input class="answer-input" type="text" placeholder="Enter Answer"></li>');
+  //     }
+  //     $('#quiz li').each(function(j) {
+  //       $(this).attr('data-eng', quizArr[j]['text']);
+  //     });
+  //   });
+  // });
+
 });
 
 function capitalize(string){
