@@ -2,17 +2,21 @@ extends layout
 
 block content
   .container
+    h1 Lingo!
+    br
+    br
     if (!user)
       a(href="/login") Login
       br
       a(href="/register") Register
     if (user)
-      p You are currently logged in as #{user.username}
-      p
+      p You are currently logged in as <strong>#{user.username}</strong>.
+        &nbsp;
         a(href="/logout") Logout
-      p
-        a(href="/translate") Translate
-      p
-        a(href="/quiz") Quiz
-      p
-        a(href="/progress") Progress
+      ul
+        li
+          a(href="/translate") Translate
+        li
+          a(href="/quiz") Quiz
+        li
+          a(href="/progress") Progress
