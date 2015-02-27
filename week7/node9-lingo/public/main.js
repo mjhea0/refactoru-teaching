@@ -20,8 +20,12 @@ $(function() {
     };
 
     $.post('/translate', wordObject, function(data) {
+      if (data.errorCode) {
+        $('#translated-word').html('<h3>Sorry. No results could be found.</h3>');
+      } else {
       $('#translated-word').html('<h3><em>'+capitalize(word)+
         '</em> translates to <em>'+data.translation+'</em>.</h3>');
+      }
     });
 
   });
