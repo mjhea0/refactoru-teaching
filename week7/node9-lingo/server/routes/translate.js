@@ -27,7 +27,6 @@ router.get('/quiz', ensureAuthenticated, function(req, res){
 router.post('/quiz', ensureAuthenticated, function(req, res) {
 
   var quizWords = req.body;
-  console.log(quizWords);
   var tasks = [];
   var quizResults =[];
 
