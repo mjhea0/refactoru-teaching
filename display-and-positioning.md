@@ -39,7 +39,7 @@
 
 ## Absolute
 
-1. Allows your to place an element *wherever* you want.
+1. Allows you to place an element *wherever* you want.
 1. Removes element from the page flow. (user sparingly!)
 
 ## Fixed
