@@ -1,0 +1,8 @@
+.grid-style {
+  background-color: gray;
+  border: 1px white dotted;
+}
+
+.table-style {
+  max-width: 500px;
+}

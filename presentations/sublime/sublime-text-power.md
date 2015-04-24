@@ -48,6 +48,7 @@
 
 <br>
 
+
 (this will make you fast and *hopefully* less error prone)
 
 ---
@@ -141,11 +142,11 @@ To the blog post! http://bit.ly/1J6qGaz
 
 <hr><br>
 
-1. Sublime Linter
-1. Sidebar Enhancements
-1. JsFormat
-1. DocBlockr
-1. GitGutter
+1. Sublime Linter - keeps you sane
+1. Sidebar Enhancements - necessary
+1. JsFormat - beautify
+1. DocBlockr - docs
+1. GitGutter - diffs
 1. Emmet (caution: walk before you run)
 
 <br>
@@ -158,12 +159,12 @@ To the blog post! http://bit.ly/1J6qGaz
 
 <hr><br>
 
-1. BracketHighlighter
-1. ColorHighlighter
-1. EditorConfig
-1. GhostText
-1. Javascript Snippets
-1. PlainTasks
+1. BracketHighlighter - highlights blocks
+1. ColorHighlighter - background color
+1. EditorConfig - config per project
+1. GhostText - awesome
+1. Javascript Snippets - time saver
+1. PlainTasks - todos!
 
 <br>
 
