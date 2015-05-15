@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container#main
+    button.btn.btn-default.btn-lg#load-countries Load Countries
+    br
+    br
+    form
+      input(type='text', placeholder='Search', id='search-country' class='form-control input-lg')
+      input(type='submit', value='Search', id='search' class='btn btn-default btn-lg')
+    br
